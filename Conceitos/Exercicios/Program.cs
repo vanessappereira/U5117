@@ -10,8 +10,9 @@
             PositivoOuNegativo(); 
             Tabuada();
             TrocarValor();
-            MediaPondNotaAluno(); */
+            MediaPondNotaAluno(); 
             CalcularAnosCrescimento();
+            MediaStockMercadorias(); */
         }
 
         public static void ConverterSegundos()
@@ -286,6 +287,150 @@
             Console.WriteLine($"\tAltura final do Zé = {altZe} cm");
             Console.WriteLine($"Foram necessários {anos} anos para o Zé ser maior que o João.");
         }
-        // Exe 9 10 13
+
+        public static void MediaStockMercadorias()
+        {
+            // Reconhecer caracteres não ASCII
+            System.Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            // Declaração de variáveis
+            int totalMercadorias;
+            double valorMercadoria, valorTotal = 0, mediaValor;
+
+            Console.Write("Digite o número total de mercadorias em stock: ");
+            while (!int.TryParse(Console.ReadLine(), out totalMercadorias) || totalMercadorias <= 0)
+            {
+                Console.WriteLine("Valor inválido! ");
+                Console.Write("Digite o número total de mercadorias em stock: ");
+            }
+
+            for (int i = 1; i <= totalMercadorias; i++)
+            {
+                Console.WriteLine($"Digite o valor da mercadoria {i}: ");
+                while (!double.TryParse(Console.ReadLine(), out valorMercadoria) || valorMercadoria <= 0)
+                {
+                    Console.Write("Valor inválido! Digite apenas valores positivos: ");
+                }
+                valorTotal += valorMercadoria;
+            }
+            mediaValor = valorTotal / totalMercadorias;
+
+            Console.WriteLine($"\nValor total em stock: {valorTotal:0.00} €");
+            Console.WriteLine($"Média de valor das mercadorias: {mediaValor:0.00} €");
+        }
+
+        public static void MediaStockMercadorias2()
+        {
+            // Reconhecer caracteres não ASCII
+            System.Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            // Declaração de variáveis
+            int totalMercadorias = 0;
+            double valorMercadoria, valorTotal = 0, mediaValor;
+            char resposta;
+
+            Console.WriteLine("__ Registo de mercadorias em stock __");
+            do
+            {
+                do
+                {
+                    // Solicitar e validar entrada do valor da mercadoria
+                    Console.Write("Digite o valor da mercadoria (€): ");
+                    if (double.TryParse(Console.ReadLine(), out valorMercadoria) || valorMercadoria <= 0)
+                    {
+                        // Adicionar o valor da mercadoria ao total
+                        valorTotal += valorMercadoria;
+                        totalMercadorias++;
+                    }
+                    else
+                        Console.WriteLine("Valor inválido! Digite apenas valores positivos.");
+                } while (valorMercadoria <= 0);
+
+                Console.Write("Mais mercadorias? (S/N)");
+                resposta = char.Parse(Console.ReadLine().ToUpper());
+
+            } while (resposta == 'S');
+
+            // Calcular a média de valor das mercadorias
+            if (totalMercadorias > 0)
+            {
+                mediaValor = valorTotal / totalMercadorias;
+                Console.WriteLine($"\nValor total do stock: {valorTotal:F2} €");
+                Console.WriteLine($"Média de valor das mercadorias: {mediaValor:F2} €");
+            }
+            else
+                Console.WriteLine("Nenhuma mercadoria foi registada.");
+        }
+
+        private static void CalcMediaSalarios()
+        {
+            double somaSalarios = 0, salario;
+            int idade, totalHabitantes = 0, mulheresBaixoSalario = 0, totalHomens = 0, totalMulheres = 0;
+            int menorIdade = int.MaxValue, maiorIdade = int.MinValue;
+            char sexo, resposta;
+
+            Console.WriteLine("Registo de habitantes. Digite os dados abaixo:");
+
+            do
+            {
+                // Entrada e validação da idade
+                do
+                {
+                    Console.Write("Digite a idade: ");
+                } while (!int.TryParse(Console.ReadLine(), out idade) || idade <= 0);
+
+                // Atualiza maior e menor idade
+                if (idade < menorIdade) menorIdade = idade;
+                if (idade > maiorIdade) maiorIdade = idade;
+
+                // Entrada e validação do sexo
+                do
+                {
+                    Console.Write("Digite o sexo (M/F): ");
+                    sexo = char.ToUpper(Console.ReadLine()[0]);
+                    if (sexo == 'M')
+                        totalHomens++;
+                    else
+                        totalMulheres++;
+
+                } while (sexo != 'M' && sexo != 'F');
+
+                // Entrada e validação do salário
+                do
+                {
+                    Console.Write("Digite o salário (€): ");
+                } while (!double.TryParse(Console.ReadLine(), out salario) || salario < 0);
+
+                // Acumula valores para cálculo de média
+                somaSalarios += salario;
+                totalHabitantes++;
+
+                // Conta mulheres com salário <= 800€
+                if (sexo == 'F' && salario <= 800) mulheresBaixoSalario++;
+
+                Console.Write("Deseja inserir mais habitantes? (S/N): ");
+                resposta = char.ToUpper(Console.ReadLine()[0]);
+
+            } while (resposta == 'S');
+
+            // Exibir resultados
+            Console.WriteLine("\n===== Estatísticas do Grupo =====");
+
+            if (totalHabitantes > 0)
+            {
+                double mediaSalario = somaSalarios / totalHabitantes;
+                Console.WriteLine($"\nMédia de salário do grupo: {mediaSalario:F2} €");
+
+                Console.WriteLine($"Maior idade do grupo: {maiorIdade} anos");
+                Console.WriteLine($"Menor idade do grupo: {menorIdade} anos");
+
+                Console.WriteLine($"Total de habitantes: {totalHabitantes} " +
+                    $"dos quais {totalMulheres} são mulheres e {totalHomens} são homens");
+
+                Console.WriteLine($"Quantidade de mulheres com salário até 800 euros: {mulheresBaixoSalario}");
+            }
+            else
+                Console.WriteLine("\nNenhum habitante registado.");
+        }
     }
 }
