@@ -11,6 +11,7 @@
             Tabuada();
             TrocarValor();
             MediaPondNotaAluno(); */
+            CalcularAnosCrescimento();
         }
 
         public static void ConverterSegundos()
@@ -258,6 +259,32 @@
                  else
                      Console.WriteLine($"Aluno nº {codigo} REPROVADO com {media:F2} valores.");            
              */
+        }
+
+        private static void CalcularAnosCrescimento()
+        {
+            byte altJoao = 150, altZe = 110, anos = 0;
+
+            // Estrutura de repetição para calcular o crescimento ao longo dos anos
+            while (altZe <= altJoao)
+            {
+                altJoao += 10;
+                altZe += 15;
+                anos++;
+            }
+
+            /* Com for
+                for (; altZe <= altJoao; anos++)
+                {
+                    altJoao = (byte)(altJoao + 10);
+                    altZe = (byte)(altZe + 15);
+                }
+             */
+
+            // Exibir resultados
+            Console.Write($"\nAltura final do João = {altJoao} cm");
+            Console.WriteLine($"\tAltura final do Zé = {altZe} cm");
+            Console.WriteLine($"Foram necessários {anos} anos para o Zé ser maior que o João.");
         }
     }
 }
