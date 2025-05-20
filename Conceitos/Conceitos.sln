@@ -26,6 +26,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetodosExemplo", "MetodosEx
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciciosMetodos", "ExerciciosMetodos\ExerciciosMetodos.csproj", "{338D6C17-B3A4-4C36-AAE3-7C3E049F35A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetodosExerciciosII", "MetodosExerciciosII\MetodosExerciciosII.csproj", "{8BB03EAA-33C2-49D7-A820-5D92080EE3F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{DF434033-2DF6-49F9-9A3D-749037B1D247}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,6 +84,14 @@ Global
 		{338D6C17-B3A4-4C36-AAE3-7C3E049F35A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{338D6C17-B3A4-4C36-AAE3-7C3E049F35A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{338D6C17-B3A4-4C36-AAE3-7C3E049F35A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BB03EAA-33C2-49D7-A820-5D92080EE3F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BB03EAA-33C2-49D7-A820-5D92080EE3F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BB03EAA-33C2-49D7-A820-5D92080EE3F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BB03EAA-33C2-49D7-A820-5D92080EE3F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF434033-2DF6-49F9-9A3D-749037B1D247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF434033-2DF6-49F9-9A3D-749037B1D247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF434033-2DF6-49F9-9A3D-749037B1D247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF434033-2DF6-49F9-9A3D-749037B1D247}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
