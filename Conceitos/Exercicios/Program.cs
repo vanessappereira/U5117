@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            /* ConverterSegundos();
+            /*ConverterSegundos();
             Frutaria();
             ParOuImpar();
             PositivoOuNegativo(); 

@@ -57,6 +57,30 @@
             {
                 Console.WriteLine($"numeros3[{i}] = {numeros3[i]}");
             }
+
+            // Ordena o array numeros1 em ordem crescente
+            Console.WriteLine("\nArray numeros1 ordenado:");
+            foreach (int valor1 in numeros1)
+            {
+                Console.WriteLine(valor1);
+            }
+
+            // Inverte a ordem do array numeros1
+            Console.WriteLine("\nArray numeros1 ordenado em ordem decrescente:");
+            Array.Reverse(numeros1);
+            foreach (int valor1 in numeros1)
+            {
+                Console.WriteLine(valor1);
+            }
+
+            // Copia os primeiros 5 elementos de numeros1 para numeros2
+            Array.Copy(numeros1, numeros2, 5);
+            Console.WriteLine("\nArray numeros2 após cópia:");
+            foreach (int valor2 in numeros2)
+            {
+                Console.WriteLine(valor2);
+            }
+
         }
     }
 }

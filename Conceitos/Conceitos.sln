@@ -30,6 +30,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetodosExerciciosII", "Meto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{DF434033-2DF6-49F9-9A3D-749037B1D247}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrizExemplos", "MatrizExemplos\MatrizExemplos.csproj", "{741E039D-0032-4568-9A95-09F07451E0E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciciosArrays", "ExerciciosArrays\ExerciciosArrays.csproj", "{2750C25E-7735-45F1-9FCB-928A25B485F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,6 +96,14 @@ Global
 		{DF434033-2DF6-49F9-9A3D-749037B1D247}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF434033-2DF6-49F9-9A3D-749037B1D247}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF434033-2DF6-49F9-9A3D-749037B1D247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{741E039D-0032-4568-9A95-09F07451E0E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{741E039D-0032-4568-9A95-09F07451E0E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{741E039D-0032-4568-9A95-09F07451E0E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{741E039D-0032-4568-9A95-09F07451E0E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2750C25E-7735-45F1-9FCB-928A25B485F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2750C25E-7735-45F1-9FCB-928A25B485F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2750C25E-7735-45F1-9FCB-928A25B485F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2750C25E-7735-45F1-9FCB-928A25B485F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
